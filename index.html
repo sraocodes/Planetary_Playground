@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planetary Playground</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
+      background: black;
+      color: white;
+      overflow: hidden;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00ffff;
+    }
+
+    #sunImage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #simCanvas {
+      flex: 1;
+      width: 100%;
+      display: block;
+      z-index: 0;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #aaa;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌍 Planetary Playground – A Gravity Simulator</h1>
+  </header>
+
+  <img id="sunImage" src="sun.gif" alt="Sun" />
+
+  <canvas id="simCanvas"></canvas>
+
+  <footer>
+    Crafted while bumping through potholes on an Indian bus 🚌 — turns out Newton works even on bad roads.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
